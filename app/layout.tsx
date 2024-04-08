@@ -2,11 +2,13 @@ import React, { ReactNode } from "react"
 import Providers from "./providers";
 import { Metadata } from "next";
 import PoweredByLogo from "@/modules/ui/PoweredByLogo";
+import { Box, Flex } from "@chakra-ui/react";
+import { ConnectWallet } from "@/modules/wallet";
 
 
 export const metadata: Metadata = {
     title: {
-        default: "Andromeda Nextjs Starter",
+        default: "KiddoCash",
         template: "%s | App Name"
     },
 }
@@ -21,10 +23,17 @@ const RootLayout = async (props: Props) => {
     return (
         <html lang="en">
             <body>
+                <Box backgroundImage="/bg.jpg" backgroundRepeat='no-repeat' backgroundPosition='center' minHeight='100vh'>
                 <Providers>
+                    <Flex justify="flex-end" align="flex-start">
+                        <Box m={2} position="static" top="8" right="8">
+                            <ConnectWallet />
+                        </Box>
+                    </Flex>
                     {children}
                     <PoweredByLogo />
                 </Providers>
+                </Box>
             </body>
         </html>
     )

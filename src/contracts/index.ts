@@ -1,0 +1,4 @@
+export const splitter = 'andr1w74rmeeurcy75v0yss6qr0x0sc09pur3pmxcs3rd9k7plqrv70mq5e0d6h'
+export const timelock = 'andr1ws28cr6mvnatpvdy5u0nmgy4as8ut7lq03z67sndcdlal0wedejsa4ag0w'
+export const childAddress ="andr138mxwjgx0mzp8n9gayeyhrqehqcrfapk72vj9d"
+export const TimeLockOwner ="andr138mxwjgx0mzp8n9gayeyhrqehqcrfapk72vj9d"

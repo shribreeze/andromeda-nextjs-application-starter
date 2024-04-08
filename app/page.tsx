@@ -1,36 +1,60 @@
 import { ConnectWallet } from "@/modules/wallet";
-import { Center, Image, Link, Text, VStack } from "@chakra-ui/react";
-import React from "react"
+import { Box, Button, Flex } from "@chakra-ui/react";
+import Link from "next/link";
+import React from "react";
 
-
-interface Props {
-}
+interface Props {}
 
 const Page = async (props: Props) => {
-    const { } = props;
-    return (
-        <Center minH="100vh">
-            <VStack spacing={3}>
-                <Image
-                    src="/logo.png"
-                    w='6rem'
-                />
-                <Text fontSize="3xl" fontWeight='bold'>
-                    Andromeda Nextjs Starter Template
-                </Text>
-                <Text>
-                    Click button to connect <b>Andromeda Devnet</b>.
-                </Text>
-                <Text fontWeight='light' mb='6'>
-                    Learn more about Andromeda&nbsp;
-                    <Link isExternal href="https://docs.andromedaprotocol.io" color='blue' textDecoration="underline">
-                        here
-                    </Link>
-                </Text>
-                <ConnectWallet />
-            </VStack>
-        </Center>
-    )
-}
+  const {} = props;
+  return (
+    <>
+      <div>
+        <Flex mt={250} align="center" justify="center" position={"relative"}>
+          <Button
+            className="parentButton"
+            mr={10}
+            as={Link}
+            href="/parent"
+            variant="solid"
+            p="4"
+            fontSize={24}
+            bg="gray.800" // Added background color
+            color="white" // Text color changed to white for better contrast
+            bgGradient="linear(to-r, red.400, pink.400)"
+            _hover={{
+              bgGradient: "linear(to-r, red.400, pink.400)",
+            }}
+            _active={{
+              bgGradient: "linear(to-r, red.500, pink.500)",
+            }}
+          >
+            Parents
+          </Button>
 
-export default Page
+          <Button
+            ml={10}
+            as="a"
+            href="/child"
+            variant="solid"
+            p="4"
+            fontSize={24}
+            bg="gray.800" // Added background color
+            color="white" // Text color changed to white for better contrast
+            bgGradient="linear(to-r, green.400, teal.400)"
+            _hover={{
+              bgGradient: "linear(to-r, green.400, teal.400)",
+            }}
+            _active={{
+              bgGradient: "linear(to-r, green.500, teal.500)",
+            }}
+          >
+            Child
+          </Button>
+        </Flex>
+      </div>
+    </>
+  );
+};
+
+export default Page;
