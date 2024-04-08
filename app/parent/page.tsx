@@ -78,7 +78,7 @@ const Page: React.FC<Props> = (props) => {
           bg="gray.100"
           textAlign="center"
         >
-          <Text fontSize="xl">Child's Savings</Text>
+          <Text fontSize="xl">Child&apos;s Savings</Text>
           <Text fontSize="2xl" fontWeight="bold" mt={2}>
             {savings ? `${savings.amount} ${savings.denom}` : 'Loading...'}
           </Text>
