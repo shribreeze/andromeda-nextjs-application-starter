@@ -2,7 +2,7 @@ import React, { ReactNode } from "react"
 import Providers from "./providers";
 import { Metadata } from "next";
 import PoweredByLogo from "@/modules/ui/PoweredByLogo";
-import { Box, Flex } from "@chakra-ui/react";
+import { Box, Flex, Text } from "@chakra-ui/react";
 import { ConnectWallet } from "@/modules/wallet";
 
 
@@ -25,7 +25,8 @@ const RootLayout = async (props: Props) => {
             <body>
                 <Box backgroundImage="/bg.jpg" backgroundRepeat='no-repeat' backgroundPosition='center' minHeight='100vh'>
                 <Providers>
-                    <Flex justify="flex-end" align="flex-start">
+                    <Flex justify="space-between" align="flex-start"top="8" left="8">
+                        <Text fontSize="2xl" fontWeight="Bold">Kiddo Cash</Text>
                         <Box m={2} position="static" top="8" right="8">
                             <ConnectWallet />
                         </Box>
